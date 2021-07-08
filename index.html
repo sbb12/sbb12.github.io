@@ -14,16 +14,29 @@
 
         <link type="text/css" rel="stylesheet" href="index.css">
 
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
 
+            }
+
+            .box {
+                background: steelblue;
+                width: 2.5em;
+                height: 2.5em;
+            }
+        </style>
 
         <title>Brython</title>
 
     </head>
 
-    <body onload="brython()">
+    <body onload="brython()" class="bg-light">
 
         <h1 class="text-center p-3 bg-info text-white">Hello and welcome to my Brython website!</h1>
-        <section class="alert-section p-3 bg-light">
+        <section class="alert-section p-3">
             <div class="container">
                 <h2 id="header2"></h2>
 
@@ -39,14 +52,14 @@
         </section>
 
 
-        <section class="name-section p-3 bg-light">
+        <section class="name-section p-3 ">
             <div class="container">
-                <h2 id="greet-text">Hello {name}</h2>
+                <h2 id="greet-text" style="visibility: hidden;">Hello {name}</h2>
 
             </div>
         </section>
 
-        <section class="joke-section p-3 bg-light">
+        <section class="joke-section p-3 ">
             <div class="container">
 
                 <div class="card-deck">
@@ -79,7 +92,7 @@
             </div>
         </section>
 
-        <section class="file-upload-section p-3 bg-light">
+        <section class="file-upload-section p-3 ">
             <div class="container">
                 <form>
                     <div class="form-group">
@@ -94,7 +107,7 @@
             </div>
         </section>
 
-        <section class="rotate p-3 bg-light">
+        <section class="rotate p-3" id="rotation-section">
             <div class="container">
                 <div class="pb-2">
                     <button class="btn btn-outline-primary" id="rotate-btn">Rotate</button>
@@ -106,28 +119,28 @@
             </div>
         </section>
 
-        <section class="local-storage p3 bg-light">
+        <section class="local-storage p3 ">
             <div class="container">
-                <form>
-                    <h2>Saved Item: <span id="item"></span></h2>
-                    <div class="form-row align-items-center">
 
-                        <div class="col-auto">
+                <h2>Saved Item: <span id="item"></span></h2>
+                <div class="form-row align-items-center">
 
-                            <input type="text" class="form-control d-inline" id="item-input"
-                                placeholder="Add to local storage">
-                        </div>
-                        <div class="col-auto">
-                            <button class="btn btn-primary d-inline" id="add-item-btn">Add</button>
-                            <button class="btn btn-primary d-inline" id="remove-item-btn">Remove</button>
-                        </div>
+                    <div class="col-auto">
+
+                        <input type="text" class="form-control d-inline" id="item-input"
+                            placeholder="Add to local storage">
                     </div>
-                </form>
+                    <div class="col-auto">
+                        <button class="btn btn-primary d-inline" id="add-item-btn">Add</button>
+                        <button class="btn btn-primary d-inline" id="remove-item-btn">Remove</button>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- Alert -->
-        <script type="text/python" id="script0">
+        <section class <!-- Alert -->
+            <script type="text/python" id="script0">
             from browser import document, console, alert
 
             def show(e):
@@ -139,8 +152,8 @@
             document['alert-btn'].bind('click', show)
         </script>
 
-        <!-- Text bind -->
-        <script type="text/python" id="script1">
+            <!-- Text bind -->
+            <script type="text/python" id="script1">
             from browser import document, console
 
             def show_text(e):
@@ -150,17 +163,18 @@
             document['to-alert-text'].bind('input', show_text)
         </script>
 
-        <!-- Template and variable -->
-        <script type="text/python" id="script2">
+            <!-- Template and variable -->
+            <script type="text/python" id="script2">
             from browser import document
             from browser.template import Template
 
             Template(document['greet-text']).render(name="Guest")
+            document['greet-text'].style.visibility = "visible"
         </script>
 
 
-        <!-- Ajax call -->
-        <script type="text/python" id="script3">
+            <!-- Ajax call -->
+            <script type="text/python" id="script3">
             from browser import document, ajax, console
             import json
 
@@ -195,8 +209,8 @@
             document["joke-btn2"].bind("click", get_joke2)
         </script>
 
-        <!-- File upload -->
-        <script type="text/python" id="script4">
+            <!-- File upload -->
+            <script type="text/python" id="script4">
         from browser import document, window
 
         def file_read(e):
@@ -211,8 +225,8 @@
         document['file-upload'].bind('input', file_read)
         </script>
 
-        <!-- Rotate- manipulate style -->
-        <script type="text/python" id="script5">
+            <!-- Rotate- manipulate style -->
+            <script type="text/python" id="script5">
         from browser import document, html
         
         
@@ -230,10 +244,14 @@
             box.style.background = f"#{ncolor}"
             angle += 10
 
+            ncolor = "%06x" % random.randint(0, 0xFFFFFF)
+
+            document["rotation-section"].style.background = f"#{ncolor}"
+
         document['rotate-btn'].bind("click", change)
         </script>
 
-        <script type="text/python" id="script6">
+            <script type="text/python" id="script6">
             from browser import document, html, window, console
 
             storage = window.localStorage
@@ -255,15 +273,15 @@
 
         </script>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
     </body>
 
 </html>
