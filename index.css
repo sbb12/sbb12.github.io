@@ -3,13 +3,9 @@ body {
   padding: 0;
 }
 
-h1 {
-  margin: 0;
-  background: lightgray;
-}
-
-.alert-section {
-  margin: 0;
-  padding: 0;
+.box {
+  background: steelblue;
+  width: 2.5em;
+  height: 2.5em;
 }
 /*# sourceMappingURL=index.css.map */

@@ -14,6 +14,8 @@
 
         <link rel="stylesheet" href="index.css">
 
+
+
         <title>Brython</title>
 
     </head>
@@ -51,7 +53,8 @@
                     <div class="card text-center" style="width: 18rem;">
                         <div class="card-body">
                             <h5 class="card-title">Jokes!</h5>
-                            <p class="card-text" id="joke-text1">A Chuck Norris joke will be generated here using joke
+                            <p class="card-text" id="joke-text1">A Chuck Norris joke will be generated here using the
+                                Chuck Norris joke
                                 api! <br> Go ahead and click the "Get Joke" button!
                             </p>
                             <button class="btn btn-outline-primary text-center" id="joke-btn1">Get Joke</button>
@@ -63,7 +66,7 @@
                         <div class="card-body">
                             <h5 class="card-title text-center">Jokes!</h5>
                             <p class="card-text text-center" id="joke-text2">A Dad joke will be generated here using
-                                joke api! <br> Go ahead and click the "Get Joke" button!
+                                the Dad joke api! <br> Go ahead and click the "Get Joke" button!
                             </p>
                             <div class="d-flex justify-content-center">
                                 <button class="btn btn-outline-primary text-center" id="joke-btn2">Get Joke</button>
@@ -81,21 +84,47 @@
 
                         <input type="file" class="form-control-file" id="file-upload">
                         <br>
-                        <textarea name="" id="file-text" cols="30" rows="10" class="form-control" id="file-text"
-                            placeholder="Upload a text file to view it here."></textarea>
+                        <textarea name="" id="file-text" cols="30" rows="5" class="form-control" id="file-text"
+                            placeholder="Upload a .txt file to view it here."></textarea>
                     </div>
                 </form>
 
             </div>
         </section>
 
-        <section class="rotate">
+        <section class="rotate p-3 bg-light">
             <div class="container">
-                <button id="rotate-btn">Rotate</button>
+                <div class="pb-2">
+                    <button class="btn btn-outline-primary" id="rotate-btn">Rotate</button>
+                </div>
+                <div id="rotate-box" class="box"></div>
+
+
+
             </div>
         </section>
 
+        <section class="local-storage p3 bg-light">
+            <div class="container">
+                <form>
+                    <h2>Saved Item: <span id="item"></span></h2>
+                    <div class="form-row align-items-center">
 
+                        <div class="col-auto">
+
+                            <input type="text" class="form-control d-inline" id="item-input"
+                                placeholder="Add to local storage">
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-primary d-inline" id="add-item-btn">Add</button>
+                            <button class="btn btn-primary d-inline" id="remove-item-btn">Remove</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Alert -->
         <script type="text/python" id="script0">
             from browser import document, console, alert
 
@@ -124,7 +153,7 @@
             from browser import document
             from browser.template import Template
 
-            Template(document['greet-text']).render(name="Surge")
+            Template(document['greet-text']).render(name="Guest")
         </script>
 
 
@@ -178,9 +207,50 @@
             reader.bind("load", onload)
         
         document['file-upload'].bind('input', file_read)
+        </script>
 
-
+        <!-- Rotate- manipulate style -->
+        <script type="text/python" id="script5">
+        from browser import document, html
         
+        
+
+        box = document["rotate-box"]
+        angle = 10
+
+        def change(e):
+
+            import random
+            ncolor = "%06x" % random.randint(0, 0xFFFFFF)    
+
+            global angle
+            box.style.transform = f"rotate({angle}deg)"
+            box.style.background = f"#{ncolor}"
+            angle += 10
+
+        document['rotate-btn'].bind("click", change)
+        </script>
+
+        <script type="text/python" id="script6">
+            from browser import document, html, window, console
+
+            storage = window.localStorage
+    
+            if storage.getItem('item'):
+                document['item'] <= storage.getItem('item')
+    
+            def add_item(e):
+                item = document['item-input'].value
+                storage.setItem('item', item)
+                document['item'].textContent = item
+    
+            def remove_item(e):
+                storage.removeItem('item')
+                document['item'].textContent = ''
+    
+            document['add-item-btn'].bind('click', add_item)
+            document['remove-item-btn'].bind('click', remove_item)
+
         </script>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
