@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+html {
+  background: #4b7f52;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: Nunito;
+}
+
+body {
+  border-radius: 1em;
+  background-color: #94c299;
+}
+
+#title {
+  padding: 10px;
+  color: white;
+}
+
+.display {
+  width: 460px;
+  height: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  border-radius: 10px;
+  background: #26402a;
+  margin: 10px;
+}
+
+#input-display {
+  color: white;
+  font-size: 35px;
+  padding-right: 30px;
+  padding-top: 3px;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: no-wrap;
+}
+
+.keys {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (4, 100px);
+  grid-template-columns: repeat(4, 100px);
+  -ms-grid-rows: (4, 60px);
+  grid-template-rows: repeat(4, 60px);
+  text-align: center;
+  gap: 20px;
+  justify-items: center;
+}
+
+.key {
+  background: white;
+  color: #232c43;
+  border-radius: 10px;
+  height: 50px;
+  width: 100px;
+  padding-top: 17px;
+  border-bottom: solid 5px #999999;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.key:hover {
+  cursor: pointer;
+}
+
+.key:active {
+  background: #d9d9d9;
+  border-bottom: solid 3px #999999;
+  margin-top: 2px;
+}
+
+#keyequals {
+  background: #fda99b;
+  border-bottom: solid 5px #999999;
+}
+
+#keyequals:active {
+  border-bottom: solid 3px #999999;
+}
+
+#hex {
+  margin-top: 130px;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  background: white;
+  color: #555;
+  text-align: center;
+  padding: 20px 20px 1px;
+}
+
+#color {
+  outline: none;
+  border: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 100px;
+  height: 100px;
+}
+
+#color:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/*# sourceMappingURL=index.css.map */

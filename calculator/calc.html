@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="calc.css">
+        <title>Calculator</title>
+    </head>
+
+    <body>
+
+        <!-- Head and Display -->
+        <p id="title">Calculator</p>
+        <div class="display">
+            <div class="input-field">
+                <div id="input-display"></div>
+            </div>
+        </div>
+
+        <!-- Keys -->
+        <div class="keys">
+            <div class="key" onclick="input(7)" id="key7">7</div>
+            <div class="key" onclick="input(8)" id="key8">8</div>
+            <div class="key" onclick="input(9)" id="key9">9</div>
+            <div class="key" onclick="keyDiv()" id="keydiv">/</div>
+            <div class="key" onclick="input(4)" id="key4">4</div>
+            <div class="key" onclick="input(5)" id="key5">5</div>
+            <div class="key" onclick="input(6)" id="key6">6</div>
+            <div class="key" onclick="keyMul()" id="keymul">x</div>
+            <div class="key" onclick="input(1)" id="key1">1</div>
+            <div class="key" onclick="input(2)" id="key2">2</div>
+            <div class="key" onclick="input(3)" id="key3">3</div>
+            <div class="key" onclick="keySub()" id="keysub">-</div>
+            <div class="key" onclick="input(0)" id="key0">0</div>
+            <div class="key" onclick="input(`.`)" id="keydot">.</div>
+            <div class="key" onclick="keyEquals()" id="keyequals">=</div>
+            <div class="key" onclick="keyAdd()" id="keyadd">+</div>
+        </div>
+
+        <div id="hex">
+            <input type="color" id="color" value="#94c299" onchange="getColor()" />
+            <h1 id="output">CHOOSE A COLOR</h1>
+        </div>
+
+      
+
+        <script src="calc.js"></script>
+    </body>
+
+</html>
