@@ -33,7 +33,12 @@ body {
     padding: 10px 25px;
   }
 
+  .right {
+    display: flex;
+  }
+
   ul {
+    z-index: 10;
     display: flex;
     padding: 0 20px;
     li {
@@ -45,6 +50,14 @@ body {
       }
     }
   }
+  #nav-hamburger {
+    z-index: 20;
+    padding: 20px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
 }
 
 .band {
@@ -53,9 +66,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 100px;
   p {
     color: #cd8232;
     font-size: 50px;
+    text-align: center;
   }
 }
 
@@ -70,6 +85,7 @@ section {
 }
 
 .about {
+  background: #e0d6cc;
   .content {
     display: flex;
     .about-img {
@@ -86,6 +102,7 @@ section {
 }
 
 .services {
+  background: #e2e2e2;
   .content {
     display: flex;
   }
@@ -100,6 +117,7 @@ section {
 }
 
 .portfolio {
+  background: #e0d6cc;
   .content {
     display: flex;
     justify-content: center;
@@ -113,8 +131,8 @@ section {
 
       .slideshow-nav {
         padding: 20px;
-        font-size: 20px;
-        color: grey;
+        font-size: 30px;
+        color: rgb(54, 53, 53);
         cursor: pointer;
       }
     }
@@ -125,11 +143,13 @@ section {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
+      margin: 0 0 30px 0;
     }
   }
 }
 
 .testimonials {
+  background: #e2e2e2;
   .trustpilot {
     img {
       padding: 20px;
@@ -162,6 +182,7 @@ section {
 }
 
 .contact {
+  background: #e0d6cc;
   .content {
     display: flex;
     flex-direction: row;
@@ -180,9 +201,15 @@ section {
     }
     .social-icons {
       width: 300px;
+
       ul {
+        float: right;
         display: flex;
         flex-direction: row;
+        padding: 0 20px 0 0;
+        li {
+          padding: 10px;
+        }
       }
       img {
         width: 40px;
@@ -192,7 +219,38 @@ section {
 }
 
 .footer {
+  background: #e0d6cc;
   width: calc(100% - 40px);
   text-align: center;
   padding: 20px;
+}
+
+///////////
+@media only screen and (max-width: 900px) {
+  #contact-logo {
+    display: none;
+  }
+  .about-img {
+    display: none;
+  }
+  .words {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .navbar {
+    position: fixed;
+    #nav-ul {
+      display: none;
+      margin: 0;
+      top: 0px;
+      right: 0;
+      position: absolute;
+      background: #1e1e1e;
+      padding: 20px;
+    }
+    #nav-hamburger {
+      display: block;
+    }
+  }
 }

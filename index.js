@@ -43,10 +43,18 @@ function slideshow_prev() {
 }
 
 function scroll_to(element_id) {
-  console.log(element_id);
-  element_id.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-    inline: "nearest",
-  });
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: $("#" + element_id).offset().top,
+    },
+    1000
+  );
 }
+
+$("#nav-hamburger").click(function () {
+  if ($("#nav-ul").is(":visible")) {
+    $("#nav-ul").hide();
+  } else {
+    $("#nav-ul").show();
+  }
+});
