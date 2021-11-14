@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #e2e2e2;
+}
+
+.navbar {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  color: white;
+
+  .left {
+    display: flex;
+    flex-direction: row;
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 20px 10px;
+
+      li {
+        padding: 0;
+      }
+    }
+  }
+  .nav-logo {
+    width: 150px;
+    padding: 10px 25px;
+  }
+
+  ul {
+    display: flex;
+    padding: 0 20px;
+    li {
+      padding: 15px;
+      list-style-type: none;
+      cursor: pointer;
+      &:hover {
+        color: #e2e2e2;
+      }
+    }
+  }
+}
+
+.band {
+  background: #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  p {
+    color: #cd8232;
+    font-size: 50px;
+  }
+}
+
+section {
+  .title {
+    display: flex;
+    justify-content: center;
+    h1 {
+      font-size: 30px;
+    }
+  }
+}
+
+.about {
+  .content {
+    display: flex;
+    .about-img {
+      width: 40%;
+      img {
+        width: 100%;
+        margin: -50px 0;
+      }
+    }
+    .words {
+      width: 60%;
+    }
+  }
+}
+
+.services {
+  .content {
+    display: flex;
+  }
+  .description {
+    width: 20%;
+    text-align: center;
+    padding: 20px;
+  }
+  ul {
+    padding-right: 30px;
+  }
+}
+
+.portfolio {
+  .content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .slideshow {
+    .slideshow-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .slideshow-nav {
+        padding: 20px;
+        font-size: 20px;
+        color: grey;
+        cursor: pointer;
+      }
+    }
+    .slideshow-img {
+      height: 300px;
+      width: 500px;
+      background-image: url("/assets/img/portfolio/1.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+}
+
+.testimonials {
+  .trustpilot {
+    img {
+      padding: 20px;
+      width: calc(100% - 40px);
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .testimonial-card {
+    width: 200px;
+    border: solid 1px grey;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+
+    .from {
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 0 0 10px 0;
+    }
+    .message {
+      text-align: center;
+    }
+  }
+}
+
+.contact {
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 00px;
+
+    img {
+      width: 200px;
+    }
+
+    li {
+      list-style-type: none;
+    }
+    .contact-info {
+      width: 300px;
+    }
+    .social-icons {
+      width: 300px;
+      ul {
+        display: flex;
+        flex-direction: row;
+      }
+      img {
+        width: 40px;
+      }
+    }
+  }
+}
+
+.footer {
+  width: calc(100% - 40px);
+  text-align: center;
+  padding: 20px;
+}

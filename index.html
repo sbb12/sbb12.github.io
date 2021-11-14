@@ -5,8 +5,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Reeve Plumbing</title>
         <link rel="stylesheet" href="index.css">
+        <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+            async></script>
     </head>
 
     <body>
@@ -14,34 +16,48 @@
 
         <section class="banner">
             <div class="navbar">
-                <div class="logo"><img src="/assets/img/logos/ReevePlumbingServices-Logo-Rectangular-RGB-Copper.svg"
-                        alt="">
+                <div class="left">
+                    <div class="nav-logo"><img
+                            src="/assets/img/logos/ReevePlumbingServices-Logo-Rectangular-RGB-Copper.svg"
+                            alt="reeve plumbing services logo">
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Email: Info@Reeveplumbing.co.uk</li>
+                            <li>Tel: 07712345678</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="right">
                     <ul>
-                        <li>About</li>
-                        <li>Services</li>
-                        <li>Portfolio</li>
-                        <li>Testimonials</li>
-                        <li>Contact</li>
+                        <li id="nav-about" onclick="scroll_to(about)">About</li>
+                        <li id="li-services" onclick="scroll_to(services)">Services</li>
+                        <li id="li-portfolio" onclick="scroll_to(portfolio)">Portfolio</li>
+                        <li id="id-testimonials" onclick="scroll_to(testimonials)">Testimonials</li>
+                        <li id="contact" onclick="scroll_to(contact_section)">Contact</li>
                     </ul>
                 </div>
             </div>
-            Reeve Plumbing Services <br> Tunbridge Wells
+            <div class="band">
+                <p>Reeve Plumbing Services</p> <br>
+            </div>
         </section>
 
-        <section class="about">
-            <h1>About</h1>
+        <section class="about" id="about">
+            <div class="title">
+                <h1>About</h1>
+            </div>
 
             <div class="content">
-                <div class="img-div">
+                <div class="about-img">
                     <img src="/assets/img/thevan.webp" alt="">
                 </div>
                 <div class="words">
                     Lucas Reeve is a qualified and fully insursed plumber with 10 years of experiences offering plumbing
                     services in the royal tumbridge wells area. <br>
                     Free no obligation quotes and estimates. <br>
-                    pricing to be agreed with customer before work commences<br>
+                    pricing to be agreed with customer before work commences.<br>
+                    Serving in the orpington area.<br>
 
                 </div>
 
@@ -52,62 +68,158 @@
         </section>
 
 
-        <section class="services">
-            <h1>Services</h1>:
-            A wide range of services are offered
+        <section class="services" id="services">
+            <div class="title">
+                <h1>Services</h1>:
+            </div>
 
-            <ul>
-                <li>Airlocks</li>
-                <li>Ball Valves</li>
-                <li>Bathroom Refurbishment</li>
-                <li>Bidets</li>
-                <li>Blocked Toilets, Sinks, Pipes & Drains</li>
-                <li>Burst Pipes</li>
-                <li>Gutters & Downpipes</li>
-                <li>Hot Cylinder Installations</li>
-                <li>Hot Water Problems</li>
-                <li>Immersion Heaters</li>
-                <li>Kitchen Plumbing</li>
-                <li>Leaks</li>
-                <li>Overflows</li>
-                <li>Pipework Replacement</li>
-                <li>Plumbing Installations</li>
-                <li>Pumps</li>
-                <li>Radiator & Valves</li>
-                <li>Repairs</li>
-                <li>Saniflo Installs</li>
-                <li>Showers & Pressure Adjustments</li>
-                <li>Stopcocks</li>
-                <li>Tap Repairs & Installations</li>
-                <li>Thermostat Problems</li>
-                <li>Toilet Repairs & Installs</li>
-                <li>Unvented & Vented Cylinders</li>
-                <li>Waste Disposals</li>
-                <li>Water Heater Repairs & Installs</li>
-                <li>Water Tank Installs</li>
-                <li>Wet Room Refurbishment</li>
-            </ul>
+            <div class="content">
+                <div class="description">
+                    A wide range of services are offered.
+                    If what you require isn't listed, please contact us.
+                    Give us a call or email us with your problem and we will offer you a solution.
+                </div>
+
+                <ul class="service-list">
+                    <li>Airlocks</li>
+                    <li>Ball Valves</li>
+                    <li>Bathroom Refurbishment</li>
+                    <li>Bidets</li>
+                    <li>Blocked Toilets, Sinks, Pipes & Drains</li>
+                    <li>Burst Pipes</li>
+                    <li>Gutters & Downpipes</li>
+                    <li>Hot Cylinder Installations</li>
+                    <li>Hot Water Problems</li>
+                    <li>Immersion Heaters</li>
+                </ul>
+                <ul class="service-list">
+                    <li>Kitchen Plumbing</li>
+                    <li>Leaks</li>
+                    <li>Overflows</li>
+                    <li>Pipework Replacement</li>
+                    <li>Plumbing Installations</li>
+                    <li>Pumps</li>
+                    <li>Radiator & Valves</li>
+                    <li>Repairs</li>
+                    <li>Saniflo Installs</li>
+                    <li>Showers & Pressure Adjustments</li>
+                </ul>
+                <ul class="service-list">
+                    <li>Stopcocks</li>
+                    <li>Tap Repairs & Installations</li>
+                    <li>Thermostat Problems</li>
+                    <li>Toilet Repairs & Installs</li>
+                    <li>Unvented & Vented Cylinders</li>
+                    <li>Waste Disposals</li>
+                    <li>Water Heater Repairs & Installs</li>
+                    <li>Water Tank Installs</li>
+                    <li>Wet Room Refurbishment</li>
+                </ul>
+            </div>
         </section>
 
-        <section class="Portfolio">
-            <h1>Portfolio</h1>
-            Some past work
+
+
+        <section class="portfolio" id="portfolio">
+            <div class="title">
+                <h1>Portfolio</h1>
+            </div>
+            <div class="content">
+
+                <div class="slideshow">
+                    <div class="slideshow-wrapper">
+                        <div class="slideshow-nav slideshow-prev" onclick="slideshow_prev()"> <span>❮</span></div>
+                        <div class="slideshow-img" id="slideshow-img" onmouseover="slideshow_stop()"
+                            onmouseout="slideshow_start()">
+                        </div>
+                        <div class="slideshow-nav slideshow-next" onclick="slideshow_next()"><span>❯</span></div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="Testimonials">
-            <h1>Testimonials</h1>
-            testimonials go here. google reviews and whatnot
+        <section class="testimonials" id="testimonials">
+            <div class="title">
+                <h1>Testimonials</h1>
+            </div>
+            <div class="content">
+                <div class="testimonial-card">
+                    <div class="from">From: Alan Smith</div>
+                    <div class="message">Lucas is a Fantastic plumber, did an excellent job in good time and at a great
+                        price. Will definitely be using his services again in the future</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="from">From: John Doe</div>
+                    <div class="message">Lucas is a Fantastic plumber, did an excellent job in good time and at a great
+                        price. Will definitely be using his services again in the future</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="from">From: Mr Anderson</div>
+                    <div class="message">Lucas is a Fantastic plumber, did an excellent job in good time and at a great
+                        price. Will definitely be using his services again in the future</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="from">From: Henry Cavil</div>
+                    <div class="message">Lucas is a Fantastic plumber, did an excellent job in good time and at a great
+                        price. Will definitely be using his services again in the future</div>
+                </div>
+            </div>
+
+            <div class="trustpilot">
+                <picture class="picture lazy-picture__image">
+                    <source media="(max-width: 768px)"
+                        srcset="//cdn.grandvision.io/binaries/_ht_1634717455416/mobile/content/gallery/gb-visionexpress/content-pages/home/trustpilot.jpg">
+                    <source media="(min-width: 768)"
+                        srcset="//cdn.grandvision.io/binaries/_ht_1634717449516/content/gallery/gb-visionexpress/content-pages/home/trustpilot.jpg">
+                    <img class="picture__image"
+                        src="//cdn.grandvision.io/binaries/_ht_1634717449516/content/gallery/gb-visionexpress/content-pages/home/trustpilot.jpg"
+                        alt="trustpilot reviews">
+                </picture>
+            </div>
+
         </section>
 
-        <section class="Contant">
-            <h1>Contact</h1>
-            contact details
+        <section class="contact" id="contact_section">
+            <div class="title">
+                <h1>Contact</h1>
+            </div>
+            <div class="content">
+                <div class="contact-info">
+
+                    <ul>
+                        <li><strong>Reeve plumbing services</strong></li>
+                        <li>Email: <strong>info@reeveplumbing.co.uk</strong></li>
+                        <li>Phone: <strong>011899988199</strong></li>
+                        <li>Whatsapp: <strong>07712345678</strong></li>
+                    </ul>
+                </div>
+
+                <img id="contact-logo" src="/assets/img/logos/ReevePlumbingServices-Logo-Rectangular-RGB-Black.svg"
+                    alt="Reeve plumbing services logo">
+
+                <div class="social-icons">
+                    <ul>
+                        <li><a href=""><img src="assets/img/icons/facebook.svg"
+                                    alt="Reeve plumbing Social facebook icon"></a></li>
+                        <li><a href=""><img src="assets/img/icons/instagram.svg"
+                                    alt="Reeve plumbing Social instagram icon"></a></li>
+                        <li><a href=""><img src="assets/img/icons/twitter.svg"
+                                    alt="Reeve plumbing Social twitter icon"></a></li>
+                    </ul>
+
+
+
+                </div>
+            </div>
+
         </section>
 
         <section class="footer">
-            footer stuff
+            &copy &reg Reeve Plumbing Services 2021. All rights reserved.
         </section>
 
+
+        <script src="index.js"></script>
     </body>
 
 </html>
