@@ -45,7 +45,7 @@ function slideshow_prev() {
 function scroll_to(element_id) {
   $([document.documentElement, document.body]).animate(
     {
-      scrollTop: $("#" + element_id).offset().top,
+      scrollTop: $("#" + element_id).offset().top - 75,
     },
     1000
   );
