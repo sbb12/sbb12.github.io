@@ -8,9 +8,14 @@ body {
   font-size: 20px;
 }
 
+.content {
+  max-width: 1200px;
+  margin-inline: auto;
+}
 .navbar {
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
+  position: fixed;
   display: flex;
   justify-content: space-between;
   color: white;
@@ -62,15 +67,21 @@ body {
 }
 
 .band {
-  background: #e2e2e2;
+  background: url("/assets/img/plum-bg-3.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 100px;
+  padding: 200px;
+  z-index: -1;
+
   p {
     color: #cd8232;
-    font-size: 50px;
+    font-size: 70px;
+    font-weight: bold;
     text-align: center;
   }
 }
@@ -87,7 +98,7 @@ section {
 }
 
 .about {
-  background: #e0d6cc;
+  background: #e2e2e2;
   .content {
     display: flex;
     .about-img {
@@ -119,7 +130,7 @@ section {
 }
 
 .portfolio {
-  background: #e0d6cc;
+  background: #e2e2e2;
   .content {
     display: flex;
     justify-content: center;
@@ -170,21 +181,21 @@ section {
     padding: 10px;
     background-color: #fff;
     border-radius: 10px;
+    text-align: center;
 
     .from {
-      text-align: center;
       font-size: 16px;
       font-weight: bold;
       padding: 0 0 10px 0;
     }
     .message {
-      text-align: center;
+      padding: 5px 10px;
     }
   }
 }
 
 .contact {
-  background: #e0d6cc;
+  background: #e2e2e2;
   .content {
     display: flex;
     flex-direction: row;
@@ -221,7 +232,7 @@ section {
 }
 
 .footer {
-  background: #e0d6cc;
+  background: #e2e2e2;
   width: calc(100% - 40px);
   text-align: center;
   padding: 20px;
