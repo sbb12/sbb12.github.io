@@ -54,3 +54,59 @@ function scroll_to(id) {
     scrollTop: $("#" + id).offset().top,
   });
 }
+
+function readURL(element, target) {
+  var file = element.prop("files")[0];
+  var reader = new FileReader();
+
+  reader.onloadend = function () {
+    target.css("background-image", "url(" + reader.result + ")");
+  };
+
+  if (file) {
+    reader.readAsDataURL(file);
+  } else {
+  }
+}
+
+$(function () {
+  $("#upload-icon-1").click(function () {
+    $("#upload-1").click();
+  });
+  $("#upload-icon-2").click(function () {
+    $("#upload-2").click();
+  });
+  $("#upload-icon-3").click(function () {
+    $("#upload-3").click();
+  });
+
+  $("#upload-1").change(function () {
+    readURL($(this), $("#img-up-1"));
+
+    if ($(this).val() != "") {
+      $("#upload-icon-1").hide();
+    } else {
+      $("#upload-icon-1").show();
+    }
+  });
+
+  $("#upload-2").change(function () {
+    readURL($(this), $("#img-up-2"));
+
+    if ($(this).val() != "") {
+      $("#upload-icon-2").hide();
+    } else {
+      $("#upload-icon-2").show();
+    }
+  });
+
+  $("#upload-3").change(function () {
+    readURL($(this), $("#img-up-3"));
+
+    if ($(this).val() != "") {
+      $("#upload-icon-3").hide();
+    } else {
+      $("#upload-icon-3").show();
+    }
+  });
+});
