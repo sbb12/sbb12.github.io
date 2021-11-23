@@ -1,9 +1,55 @@
 #logoimg {
   width: 150px;
 }
+
 #menu-burger-icon {
   height: 36px;
 }
+
 .social-icon {
   width: 48px;
+}
+
+.text-grey {
+  color: var(--bs-gray-400) !important;
+}
+
+.bg-dark2 {
+  background-color: var(--bs-gray-800) !important;
+}
+.bg-grey200 {
+  background-color: var(--bs-gray-200) !important;
+}
+
+.bg-copper {
+  background-color: #cd8232;
+}
+
+.img-upload-box {
+  width: 30%;
+  height: 200px;
+  border: dashed 2px #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.img-upload-box i {
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  padding: 3rem;
+}
+
+.img-upload {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #header-conctact > span {
+    display: none;
+  }
 }
